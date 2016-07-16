@@ -54,7 +54,10 @@
     textAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
     textAttrs[NSFontAttributeName] = YYNavigationTitleFont;
     // UIOffsetZero是结构体, 只要包装成NSValue对象, 才能放进字典\数组中
-    textAttrs[NSShadowAttributeName] = [NSValue valueWithUIOffset:UIOffsetZero];
+    NSShadow *shadow = [NSShadow new];
+    [shadow setShadowColor : [UIColor colorWithWhite:0.0f alpha:1.0f]];
+    [shadow setShadowOffset : CGSizeZero];
+    textAttrs[NSShadowAttributeName] = shadow;
     [appearance setTitleTextAttributes:textAttrs];
 }
 
@@ -71,7 +74,10 @@
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
     textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:15];
-    textAttrs[NSShadowAttributeName] = [NSValue valueWithUIOffset:UIOffsetZero];
+    NSShadow *shadow = [NSShadow new];
+    [shadow setShadowColor : [UIColor colorWithWhite:0.0f alpha:1.0f]];
+    [shadow setShadowOffset : CGSizeZero];
+    textAttrs[NSShadowAttributeName] = shadow;
     [appearance setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     
     // 设置高亮状态的文字属性
