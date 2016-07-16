@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AB1454BAA6A9E9CACC0D0851DCC9FF659D827EBB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AB1454BAA6A9E9CACC0D0851DCC9FF659D827EBB" : 0,
+    "ADE105B5E71C88C0ABF755C6B17CA1BD822CE0AB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "97A9EC9A-DD76-4AD0-8DE5-525D024C8099",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AB1454BAA6A9E9CACC0D0851DCC9FF659D827EBB" : "WeiBo\/",
+    "ADE105B5E71C88C0ABF755C6B17CA1BD822CE0AB" : "WeiBo\/WeiBo\/WeiBo\/Classes\/Main(%E4%B8%BB%E8%A6%81)\/Lib\/MJPhotoBrowser\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WeiBo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WeiBo\/WeiBo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/XYXiaoYuan\/WeiBo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AB1454BAA6A9E9CACC0D0851DCC9FF659D827EBB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/azxfire\/MJPhotoBrowser.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ADE105B5E71C88C0ABF755C6B17CA1BD822CE0AB"
+    }
+  ]
+}
