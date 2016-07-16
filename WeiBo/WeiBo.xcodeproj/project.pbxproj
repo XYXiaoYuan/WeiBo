@@ -27,6 +27,15 @@
 		1CC4DF281D3A73DD00AF774E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC4DF271D3A73DD00AF774E /* CoreGraphics.framework */; };
 		1CC4DF2A1D3A73E600AF774E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC4DF291D3A73E600AF774E /* UIKit.framework */; };
 		1CC4DF2C1D3A73F000AF774E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC4DF2B1D3A73F000AF774E /* Foundation.framework */; };
+		1CD683931D3A7D540007701B /* YYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683921D3A7D540007701B /* YYNavigationController.m */; };
+		1CD683961D3A7D690007701B /* YYCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683951D3A7D690007701B /* YYCommonViewController.m */; };
+		1CD683991D3A7D890007701B /* YYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683981D3A7D890007701B /* YYHomeViewController.m */; };
+		1CD6839C1D3A7DA10007701B /* YYMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD6839B1D3A7DA10007701B /* YYMessageViewController.m */; };
+		1CD6839F1D3A7DC70007701B /* YYDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD6839E1D3A7DC70007701B /* YYDiscoveryViewController.m */; };
+		1CD683A21D3A7DD90007701B /* YYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683A11D3A7DD90007701B /* YYProfileViewController.m */; };
+		1CD683A51D3A7E240007701B /* YYComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683A41D3A7E240007701B /* YYComposeViewController.m */; };
+		1CD683A81D3A81780007701B /* UIImage+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683A71D3A81780007701B /* UIImage+YYExtension.m */; };
+		1CD683AB1D3A86550007701B /* YYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683AA1D3A86550007701B /* YYTabBar.m */; };
 		F7B8A6074AA297B6068B33AF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1B73E40A19F466FB15B8AF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +94,24 @@
 		1CC4DF271D3A73DD00AF774E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1CC4DF291D3A73E600AF774E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1CC4DF2B1D3A73F000AF774E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1CD683911D3A7D540007701B /* YYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYNavigationController.h; sourceTree = "<group>"; };
+		1CD683921D3A7D540007701B /* YYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYNavigationController.m; sourceTree = "<group>"; };
+		1CD683941D3A7D690007701B /* YYCommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCommonViewController.h; sourceTree = "<group>"; };
+		1CD683951D3A7D690007701B /* YYCommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCommonViewController.m; sourceTree = "<group>"; };
+		1CD683971D3A7D890007701B /* YYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHomeViewController.h; sourceTree = "<group>"; };
+		1CD683981D3A7D890007701B /* YYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHomeViewController.m; sourceTree = "<group>"; };
+		1CD6839A1D3A7DA10007701B /* YYMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMessageViewController.h; sourceTree = "<group>"; };
+		1CD6839B1D3A7DA10007701B /* YYMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMessageViewController.m; sourceTree = "<group>"; };
+		1CD6839D1D3A7DC70007701B /* YYDiscoveryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDiscoveryViewController.h; sourceTree = "<group>"; };
+		1CD6839E1D3A7DC70007701B /* YYDiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiscoveryViewController.m; sourceTree = "<group>"; };
+		1CD683A01D3A7DD90007701B /* YYProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYProfileViewController.h; sourceTree = "<group>"; };
+		1CD683A11D3A7DD90007701B /* YYProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYProfileViewController.m; sourceTree = "<group>"; };
+		1CD683A31D3A7E240007701B /* YYComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYComposeViewController.h; sourceTree = "<group>"; };
+		1CD683A41D3A7E240007701B /* YYComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYComposeViewController.m; sourceTree = "<group>"; };
+		1CD683A61D3A81780007701B /* UIImage+YYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YYExtension.h"; sourceTree = "<group>"; };
+		1CD683A71D3A81780007701B /* UIImage+YYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YYExtension.m"; sourceTree = "<group>"; };
+		1CD683A91D3A86550007701B /* YYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTabBar.h; sourceTree = "<group>"; };
+		1CD683AA1D3A86550007701B /* YYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTabBar.m; sourceTree = "<group>"; };
 		7C1B73E40A19F466FB15B8AF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8A06C352AED1C16729F030 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A62AFE44AB6C95B79DF9A007 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,8 +214,8 @@
 				1C593D531D3A6D6E00E8AA13 /* Message(消息) */,
 				1C593D411D3A6D6E00E8AA13 /* Discover(发现) */,
 				1C593D5B1D3A6D6E00E8AA13 /* Profile(我) */,
-				1C593D571D3A6D6E00E8AA13 /* Newfeature新特性 */,
 				1C593D3C1D3A6D6E00E8AA13 /* Compose(发微博) */,
+				1C593D571D3A6D6E00E8AA13 /* Newfeature新特性 */,
 				1C593D591D3A6D6E00E8AA13 /* OAuth(授权) */,
 			);
 			path = Classes;
@@ -197,9 +224,9 @@
 		1C593D3C1D3A6D6E00E8AA13 /* Compose(发微博) */ = {
 			isa = PBXGroup;
 			children = (
+				1C593D3F1D3A6D6E00E8AA13 /* Tool */,
 				1C593D3D1D3A6D6E00E8AA13 /* Controller */,
 				1C593D3E1D3A6D6E00E8AA13 /* Model */,
-				1C593D3F1D3A6D6E00E8AA13 /* Tool */,
 				1C593D401D3A6D6E00E8AA13 /* View */,
 			);
 			path = "Compose(发微博)";
@@ -208,6 +235,8 @@
 		1C593D3D1D3A6D6E00E8AA13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CD683A31D3A7E240007701B /* YYComposeViewController.h */,
+				1CD683A41D3A7E240007701B /* YYComposeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,6 +275,8 @@
 		1C593D421D3A6D6E00E8AA13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CD6839D1D3A7DC70007701B /* YYDiscoveryViewController.h */,
+				1CD6839E1D3A7DC70007701B /* YYDiscoveryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -277,6 +308,8 @@
 		1C593D461D3A6D6E00E8AA13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CD683971D3A7D890007701B /* YYHomeViewController.h */,
+				1CD683981D3A7D890007701B /* YYHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,6 +345,8 @@
 		1C593D4A1D3A6D6E00E8AA13 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1CD683A61D3A81780007701B /* UIImage+YYExtension.h */,
+				1CD683A71D3A81780007701B /* UIImage+YYExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -321,6 +356,10 @@
 			children = (
 				1C593D801D3A71C800E8AA13 /* YYTabBarViewController.h */,
 				1C593D811D3A71C800E8AA13 /* YYTabBarViewController.m */,
+				1CD683911D3A7D540007701B /* YYNavigationController.h */,
+				1CD683921D3A7D540007701B /* YYNavigationController.m */,
+				1CD683941D3A7D690007701B /* YYCommonViewController.h */,
+				1CD683951D3A7D690007701B /* YYCommonViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -353,6 +392,8 @@
 		1C593D521D3A6D6E00E8AA13 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1CD683A91D3A86550007701B /* YYTabBar.h */,
+				1CD683AA1D3A86550007701B /* YYTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -370,6 +411,8 @@
 		1C593D541D3A6D6E00E8AA13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CD6839A1D3A7DA10007701B /* YYMessageViewController.h */,
+				1CD6839B1D3A7DA10007701B /* YYMessageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -431,6 +474,8 @@
 		1C593D5C1D3A6D6E00E8AA13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1CD683A01D3A7DD90007701B /* YYProfileViewController.h */,
+				1CD683A11D3A7DD90007701B /* YYProfileViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -693,17 +738,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CD683A81D3A81780007701B /* UIImage+YYExtension.m in Sources */,
 				1C593D771D3A6EC700E8AA13 /* MJPhotoToolbar.m in Sources */,
 				1C593D741D3A6EC700E8AA13 /* MJPhotoBrowser.m in Sources */,
 				1C593D821D3A71C800E8AA13 /* YYTabBarViewController.m in Sources */,
 				1C593D791D3A6EC700E8AA13 /* SDWebImageManager+MJ.m in Sources */,
 				1C593D601D3A6D6E00E8AA13 /* main.m in Sources */,
+				1CD6839C1D3A7DA10007701B /* YYMessageViewController.m in Sources */,
+				1CD683931D3A7D540007701B /* YYNavigationController.m in Sources */,
 				1C593D751D3A6EC700E8AA13 /* MJPhotoLoadingView.m in Sources */,
+				1CD683991D3A7D890007701B /* YYHomeViewController.m in Sources */,
+				1CD683A51D3A7E240007701B /* YYComposeViewController.m in Sources */,
 				1C593D781D3A6EC700E8AA13 /* MJPhotoView.m in Sources */,
+				1CD683A21D3A7DD90007701B /* YYProfileViewController.m in Sources */,
 				1C593D761D3A6EC700E8AA13 /* MJPhotoProgressView.m in Sources */,
 				1C593D721D3A6EC700E8AA13 /* MJPhoto.m in Sources */,
+				1CD683961D3A7D690007701B /* YYCommonViewController.m in Sources */,
 				1C593D7D1D3A6F0C00E8AA13 /* RegexKitLite.m in Sources */,
 				1C593D5F1D3A6D6E00E8AA13 /* AppDelegate.m in Sources */,
+				1CD6839F1D3A7DC70007701B /* YYDiscoveryViewController.m in Sources */,
+				1CD683AB1D3A86550007701B /* YYTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,7 +882,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "WeiBo/Classes/Main(主要)/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = WeiBo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bruceyuan.WeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -844,7 +898,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "WeiBo/Classes/Main(主要)/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = WeiBo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bruceyuan.WeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
