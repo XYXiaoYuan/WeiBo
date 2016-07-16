@@ -13,6 +13,13 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "UIImage+YYExtension.h"
+    #import "UIView+Extension.h"
+
+#ifdef DEBUG // 调试状态, 打开LOG功能
+#define YYLog(...) NSLog(__VA_ARGS__)
+#else // 发布状态, 关闭LOG功能
+#define YYLog(...)
+#endif
 
 
 // 是否为iOS7

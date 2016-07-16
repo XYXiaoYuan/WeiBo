@@ -16,8 +16,14 @@
 #import "YYDiscoveryViewController.h"
 #import "YYProfileViewController.h"
 
-@interface YYTabBarViewController ()
+// 自定义YYTabBar
+#import "YYTabBar.h"
 
+@interface YYTabBarViewController ()<UITabBarControllerDelegate>
+@property (nonatomic, weak) YYHomeViewController *homeVc;
+@property (nonatomic, weak) YYMessageViewController *messageVc;
+@property (nonatomic, weak) YYProfileViewController *profileVc;
+@property (nonatomic, weak) UIViewController *lastSelectedViewContoller;
 @end
 
 @implementation YYTabBarViewController
@@ -28,6 +34,8 @@
     // 1.添加所有的子控制器
     [self addAllChildViewControllers];
     
+    // 3.创建自定义tabbar
+    [self addCustomTabBar];
 }
 
 #pragma mark - 1.添加所有的子控制器
@@ -91,6 +99,22 @@
     [item setTitleTextAttributes:selectedAttr forState:UIControlStateSelected];
 }
 
-
+#pragma mark - 3.创建自定义tabbar
+- (void)addCustomTabBar
+{
+    // 创建自定义tabbar
+    YYTabBar *customTabBar = [[YYTabBar alloc] init];
+    
+    // 更换系统自带的tabbar
+    [self setValue:customTabBar forKeyPath:@"tabBar"];
+    
+    customTabBar.tabBarPlusClickBlock = ^{
+        // 弹出发微博控制器
+        YYLog(@"弹出发微博控制器");
+//        YYComposeViewController *compose = [[YYComposeViewController alloc] init];
+//        YYNavigationController *nav = [[YYNavigationController alloc] initWithRootViewController:compose];
+//        [self presentViewController:nav animated:YES completion:nil];
+    };
+}
 
 @end

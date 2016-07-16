@@ -10,4 +10,7 @@
 
 @interface YYTabBar : UITabBar
 
+/** tabBar被点击的block */
+@property(nonatomic,copy) void (^tabBarPlusClickBlock)();
+
 @end
