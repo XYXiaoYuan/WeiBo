@@ -79,7 +79,7 @@
 
 
 #pragma mark - 2.设置tabBarItems的文字属性
-+ (void)initialize
++ (void)load
 {
     // 2.1 正常状态下的文字
     NSMutableDictionary *normalAttr = [NSMutableDictionary dictionary];
@@ -102,12 +102,13 @@
 #pragma mark - 3.创建自定义tabbar
 - (void)addCustomTabBar
 {
-    // 创建自定义tabbar
+    // 3.1 创建自定义tabbar
     YYTabBar *customTabBar = [[YYTabBar alloc] init];
     
-    // 更换系统自带的tabbar
+    // 3.2 用 KVC 更换系统自带的tabbar
     [self setValue:customTabBar forKeyPath:@"tabBar"];
     
+    // 3.3 处理加号按钮的点击,写处理点击的逻辑放在block中
     customTabBar.tabBarPlusClickBlock = ^{
         // 弹出发微博控制器
         YYLog(@"弹出发微博控制器");

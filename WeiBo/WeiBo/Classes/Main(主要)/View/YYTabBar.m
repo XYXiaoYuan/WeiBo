@@ -33,13 +33,16 @@
 - (void)setupPlusButton
 {
     UIButton *plusButton = [[UIButton alloc] init];
+    
     // 设置背景
     [plusButton setBackgroundImage:[UIImage yy_imageWithName:@"tabbar_compose_button"] forState:UIControlStateNormal];
     [plusButton setBackgroundImage:[UIImage yy_imageWithName:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
+    
     // 设置图标
     [plusButton setImage:[UIImage yy_imageWithName:@"tabbar_compose_icon_add"] forState:UIControlStateNormal];
     [plusButton setImage:[UIImage yy_imageWithName:@"tabbar_compose_icon_add_highlighted"] forState:UIControlStateHighlighted];
     [plusButton addTarget:self action:@selector(plusClick) forControlEvents:UIControlEventTouchUpInside];
+    
     // 添加
     [self addSubview:plusButton];
     self.plusButton = plusButton;
