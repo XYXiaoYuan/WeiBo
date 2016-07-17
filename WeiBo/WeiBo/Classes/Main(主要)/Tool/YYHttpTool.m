@@ -74,6 +74,7 @@
                 break;
         }
     }];
+    
     // 开始监控
     [mgr startMonitoring];
 }
