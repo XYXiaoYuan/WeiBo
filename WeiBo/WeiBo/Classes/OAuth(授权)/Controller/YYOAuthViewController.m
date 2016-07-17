@@ -82,7 +82,7 @@
     NSRange range = [url rangeOfString:str];
     if (range.location != NSNotFound) { // 是回调地址
         // 截取授权成功后的请求标记
-        int from = range.location + range.length;
+        NSInteger from = range.location + range.length;
         NSString *code = [url substringFromIndex:from];
         
         // 根据code获得一个accessToken
