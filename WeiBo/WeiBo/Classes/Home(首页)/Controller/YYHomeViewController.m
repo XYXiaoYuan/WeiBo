@@ -8,6 +8,7 @@
 
 #import "YYHomeViewController.h"
 #import "YYTitleButton.h"
+#import "YYPopMenu.h"
 
 @interface YYHomeViewController ()
 /** titleButton */
@@ -61,14 +62,17 @@
     [titleButton setImage:[UIImage yy_imageWithName:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
     
     // 弹出菜单
-//    UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
-//    button.backgroundColor = [UIColor blueColor];
-//    
-//    HMPopMenu *menu = [[HMPopMenu alloc ] initWithContentView:nil];
-//    menu.delegate = self;
-//    menu.arrowPosition = HMPopMenuArrowPositionCenter;
-//    //    menu.dimBackground = YES;
-//    [menu showInRect:CGRectMake(100, 0, 200, 480)];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    button.backgroundColor = [UIColor blueColor];
+    
+    YYPopMenu *menu = [[YYPopMenu alloc ] initWithContentView:nil];
+    menu.popMenuDidDismissed = ^{
+        YYTitleButton *titleButton = (YYTitleButton *)self.navigationItem.titleView;
+        [titleButton setImage:[UIImage yy_imageWithName:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    };
+    menu.arrowPosition = HMPopMenuArrowPositionCenter;
+    menu.dimBackground = YES;
+    [menu showInRect:CGRectMake(100, 64, 100, 160)];
 }
 
 

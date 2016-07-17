@@ -57,6 +57,7 @@
 		1CD683EC1D3B41460007701B /* YYNewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683EB1D3B41460007701B /* YYNewfeatureViewController.m */; };
 		1CD683EF1D3B42380007701B /* YYControllerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683EE1D3B42380007701B /* YYControllerTool.m */; };
 		1CD683F11D3B44750007701B /* EmotionIcons in Resources */ = {isa = PBXBuildFile; fileRef = 1CD683F01D3B44750007701B /* EmotionIcons */; };
+		1CD683F71D3B4B4A0007701B /* YYPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683F61D3B4B4A0007701B /* YYPopMenu.m */; };
 		F7B8A6074AA297B6068B33AF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1B73E40A19F466FB15B8AF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +174,8 @@
 		1CD683ED1D3B42380007701B /* YYControllerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYControllerTool.h; sourceTree = "<group>"; };
 		1CD683EE1D3B42380007701B /* YYControllerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYControllerTool.m; sourceTree = "<group>"; };
 		1CD683F01D3B44750007701B /* EmotionIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EmotionIcons; sourceTree = "<group>"; };
+		1CD683F51D3B4B4A0007701B /* YYPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYPopMenu.h; sourceTree = "<group>"; };
+		1CD683F61D3B4B4A0007701B /* YYPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYPopMenu.m; sourceTree = "<group>"; };
 		7C1B73E40A19F466FB15B8AF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8A06C352AED1C16729F030 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A62AFE44AB6C95B79DF9A007 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -384,6 +387,8 @@
 				1CD683F21D3B493C0007701B /* Cell */,
 				1CD683B21D3B31BC0007701B /* YYTitleButton.h */,
 				1CD683B31D3B31BC0007701B /* YYTitleButton.m */,
+				1CD683F51D3B4B4A0007701B /* YYPopMenu.h */,
+				1CD683F61D3B4B4A0007701B /* YYPopMenu.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -941,6 +946,7 @@
 				1CD683A21D3A7DD90007701B /* YYProfileViewController.m in Sources */,
 				1C593D761D3A6EC700E8AA13 /* MJPhotoProgressView.m in Sources */,
 				1CD683EC1D3B41460007701B /* YYNewfeatureViewController.m in Sources */,
+				1CD683F71D3B4B4A0007701B /* YYPopMenu.m in Sources */,
 				1C593D721D3A6EC700E8AA13 /* MJPhoto.m in Sources */,
 				1CD683961D3A7D690007701B /* YYCommonViewController.m in Sources */,
 				1C593D7D1D3A6F0C00E8AA13 /* RegexKitLite.m in Sources */,
