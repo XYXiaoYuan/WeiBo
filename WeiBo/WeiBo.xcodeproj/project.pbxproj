@@ -380,6 +380,8 @@
 		1C593D481D3A6D6E00E8AA13 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1CD683F41D3B493C0007701B /* Detail */,
+				1CD683F21D3B493C0007701B /* Cell */,
 				1CD683B21D3B31BC0007701B /* YYTitleButton.h */,
 				1CD683B31D3B31BC0007701B /* YYTitleButton.m */,
 			);
@@ -681,6 +683,28 @@
 				1CD683E61D3B3FB30007701B /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		1CD683F21D3B493C0007701B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1CD683F31D3B493C0007701B /* Toolbar */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1CD683F31D3B493C0007701B /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Toolbar;
+			sourceTree = "<group>";
+		};
+		1CD683F41D3B493C0007701B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		A1CE419F5C776A6EAF64B340 /* Pods */ = {
