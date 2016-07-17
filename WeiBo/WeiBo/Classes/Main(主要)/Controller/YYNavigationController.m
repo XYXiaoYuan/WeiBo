@@ -87,7 +87,7 @@
     
     // 设置不可用状态(disable)的文字属性
     NSMutableDictionary *disableTextAttrs = [NSMutableDictionary dictionaryWithDictionary:textAttrs];
-    disableTextAttrs[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+    disableTextAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
     [appearance setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
     
     /**设置背景**/

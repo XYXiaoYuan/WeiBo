@@ -16,6 +16,8 @@
 #import "YYStatusTool.h"
 #import "YYEmotion.h"
 #import "YYEmotionKeyboard.h"
+#import "AFNetworking.h"
+
 
 @interface YYComposeViewController () <YYComposeToolbarDelegate, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic, weak) YYEmotionTextView *textView;
@@ -151,7 +153,7 @@
         titleLabel.height = 44;
         self.navigationItem.titleView = titleLabel;
     } else {
-        self.title = @"发微博";
+        self.navigationItem.title = @"发微博";
     }
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleBordered target:self action:@selector(cancel)];
@@ -165,6 +167,7 @@
  */
 - (void)cancel
 {
+    [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -189,30 +192,29 @@
  */
 - (void)sendStatusWithImage
 {
-    //    // 1.获得请求管理者
-    //    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-    //
-    //    // 2.封装请求参数
-    //    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    //    params[@"access_token"] = [YYAccountTool account].access_token;
-    //    params[@"status"] = self.textView.text;
-    //
-    //    // 3.发送POST请求
-    //    [mgr POST:@"https://upload.api.weibo.com/2/statuses/upload.json" parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-    //
-    //#warning 目前新浪开放的发微博接口 最多 只能上传一张图片
-    //        UIImage *image = [self.photosView.images firstObject];
-    //
-    //        NSData *data = UIImageJPEGRepresentation(image, 1.0);
-    //
-    //        // 拼接文件参数
-    //        [formData appendPartWithFileData:data name:@"pic" fileName:@"status.jpg" mimeType:@"image/jpeg"];
-    //
-    //    } success:^(AFHTTPRequestOperation *operation, NSDictionary *statusDict) {
-    //        [MBProgressHUD showSuccess:@"发表成功"];
-    //    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    //        [MBProgressHUD showError:@"发表失败"];
-    //    }];
+    // 1.获得请求管理者
+    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+
+    // 2.封装请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = [YYAccountTool account].access_token;
+    params[@"status"] = self.textView.text;
+
+    // 3.发送POST请求
+    [mgr POST:@"https://upload.api.weibo.com/2/statuses/upload.json" parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+#warning 目前新浪开放的发微博接口 最多 只能上传一张图片
+        UIImage *image = [self.photosView.images firstObject];
+        
+        NSData *data = UIImageJPEGRepresentation(image, 1.0);
+        
+        // 拼接文件参数
+        [formData appendPartWithFileData:data name:@"pic" fileName:@"status.jpg" mimeType:@"image/jpeg"];
+    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [MBProgressHUD showSuccess:@"发表成功"];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [MBProgressHUD showError:@"发表失败"];
+    }];
+    
 }
 
 
