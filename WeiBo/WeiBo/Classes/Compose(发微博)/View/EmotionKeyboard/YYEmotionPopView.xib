@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YYEmotionPopView">
+            <rect key="frame" x="0.0" y="0.0" width="64" height="92"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGV-CK-2bT" customClass="YYEmotionView">
+                    <rect key="frame" x="16" y="16" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="vyz-cB-Xye"/>
+                    </constraints>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="yGV-CK-2bT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="HQV-gk-505"/>
+                <constraint firstAttribute="trailing" secondItem="yGV-CK-2bT" secondAttribute="trailing" constant="16" id="IDq-dL-9Lh"/>
+                <constraint firstItem="yGV-CK-2bT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="XvR-s1-75d"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="emotionView" destination="yGV-CK-2bT" id="ia3-54-EMC"/>
+            </connections>
+        </view>
+    </objects>
+</document>

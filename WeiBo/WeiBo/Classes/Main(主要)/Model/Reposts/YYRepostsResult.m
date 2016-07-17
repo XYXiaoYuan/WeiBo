@@ -8,13 +8,12 @@
 
 #import "YYRepostsResult.h"
 #import "MJExtension.h"
-//#import "YYStatus.h"
+#import "YYStatus.h"
 
 @implementation YYRepostsResult
-// TODO YYStatus 映射
 
-//- (NSDictionary *)mj_objectClassInArray
-//{
-//    return @{@"reposts" : [YYStatus class]};
-//}
+- (NSDictionary *)mj_objectClassInArray
+{
+    return @{@"reposts" : [YYStatus class]};
+}
 @end

@@ -52,8 +52,28 @@
 // cell的内边距
 #define YYStatusCellInset 10
 
+/** 表情相关 */
+// 表情的最大行数
+#define YYEmotionMaxRows 3
+// 表情的最大列数
+#define YYEmotionMaxCols 7
+// 每页最多显示多少个表情
+#define YYEmotionMaxCountPerPage (YYEmotionMaxRows * YYEmotionMaxCols - 1)
+
+// 通知
+// 表情选中的通知
+#define YYEmotionDidSelectedNotification @"YYEmotionDidSelectedNotification"
+// 点击删除按钮的通知
+#define YYEmotionDidDeletedNotification @"YYEmotionDidDeletedNotification"
+// 通知里面取出表情用的key
+#define YYSelectedEmotion @"YYSelectedEmotion"
 
 
+// 链接选中的通知
+#define YYLinkDidSelectedNotification @"YYLinkDidSelectedNotification"
+
+// 富文本里面出现的链接
+#define YYLinkText @"YYLinkText"
 
 #endif
 
