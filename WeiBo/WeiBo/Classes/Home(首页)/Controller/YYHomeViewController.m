@@ -70,7 +70,7 @@
         YYTitleButton *titleButton = (YYTitleButton *)self.navigationItem.titleView;
         [titleButton setImage:[UIImage yy_imageWithName:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
     };
-    menu.arrowPosition = HMPopMenuArrowPositionCenter;
+    menu.arrowPosition = YYPopMenuArrowPositionCenter;
     menu.dimBackground = YES;
     [menu showInRect:CGRectMake(100, 64, 100, 160)];
 }

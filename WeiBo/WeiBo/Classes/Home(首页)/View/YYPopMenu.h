@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
-    HMPopMenuArrowPositionCenter = 0,
-    HMPopMenuArrowPositionLeft = 1,
-    HMPopMenuArrowPositionRight = 2
-} HMPopMenuArrowPosition;
+    YYPopMenuArrowPositionCenter = 0,
+    YYPopMenuArrowPositionLeft = 1,
+    YYPopMenuArrowPositionRight = 2
+} YYPopMenuArrowPosition;
 
 
 @interface YYPopMenu : UIView
@@ -21,7 +21,7 @@ typedef enum {
 
 @property (nonatomic, assign, getter = isDimBackground) BOOL dimBackground;
 
-@property (nonatomic, assign) HMPopMenuArrowPosition arrowPosition;
+@property (nonatomic, assign) YYPopMenuArrowPosition arrowPosition;
 
 /**
  *  初始化方法

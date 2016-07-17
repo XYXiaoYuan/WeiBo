@@ -39,7 +39,7 @@
         self.container = container;
         
         // 默认箭头指向中间
-        self.arrowPosition = HMPopMenuArrowPositionCenter;
+        self.arrowPosition = YYPopMenuArrowPositionCenter;
     }
     return self;
 }
@@ -85,20 +85,20 @@
     }
 }
 
-- (void)setArrowPosition:(HMPopMenuArrowPosition)arrowPosition
+- (void)setArrowPosition:(YYPopMenuArrowPosition)arrowPosition
 {
     _arrowPosition = arrowPosition;
     
     switch (arrowPosition) {
-        case HMPopMenuArrowPositionCenter:
+        case YYPopMenuArrowPositionCenter:
             self.container.image = [UIImage yy_resizedImage:@"popover_background"];
             break;
             
-        case HMPopMenuArrowPositionLeft:
+        case YYPopMenuArrowPositionLeft:
             self.container.image = [UIImage yy_resizedImage:@"popover_background_left"];
             break;
             
-        case HMPopMenuArrowPositionRight:
+        case YYPopMenuArrowPositionRight:
             self.container.image = [UIImage yy_resizedImage:@"popover_background_right"];
             break;
     }
