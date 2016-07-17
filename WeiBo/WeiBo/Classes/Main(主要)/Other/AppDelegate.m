@@ -8,6 +8,8 @@
 //
 
 #import "AppDelegate.h"
+#import "AFNetworkReachabilityManager.h"
+#import "YYHttpTool.h"
 #import "YYOAuthViewController.h"
 #import "YYControllerTool.h"
 #import "YYAccountTool.h"
@@ -27,8 +29,10 @@
     
     application.statusBarHidden = NO;
     
+    // 1.创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
+    // 2.让窗口可见
     [self.window makeKeyAndVisible];
     
     // 3.设置窗口的根控制器
@@ -38,9 +42,40 @@
     } else { // 没有登录过
         self.window.rootViewController = [[YYOAuthViewController alloc] init];
     }
+    
+    // 4.判断网络状态
+     [self checkNetworkStates];
+
 
     return YES;
 }
+
+// 实时监控网络状态
+- (void)checkNetworkStates
+{
+    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+    // 当网络状态改变了，就会调用
+    [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown: // 未知网络
+            case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
+//                YYLog(@"没有网络(断网)");
+                [MBProgressHUD showError:@"网络异常，请检查网络设置！"];
+                break;
+
+            case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
+//                YYLog(@"手机自带网络");
+                break;
+
+            case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
+//                YYLog(@"WIFI");
+                break;
+        }
+    }];
+    // 开始监控
+    [mgr startMonitoring];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
