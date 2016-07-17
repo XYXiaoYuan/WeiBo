@@ -44,38 +44,11 @@
     }
     
     // 4.判断网络状态
-     [self checkNetworkStates];
+     [YYHttpTool checkNetworkStates];
 
 
     return YES;
 }
-
-// 实时监控网络状态
-- (void)checkNetworkStates
-{
-    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
-    // 当网络状态改变了，就会调用
-    [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        switch (status) {
-            case AFNetworkReachabilityStatusUnknown: // 未知网络
-            case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
-//                YYLog(@"没有网络(断网)");
-                [MBProgressHUD showError:@"网络异常，请检查网络设置！"];
-                break;
-
-            case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
-//                YYLog(@"手机自带网络");
-                break;
-
-            case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
-//                YYLog(@"WIFI");
-                break;
-        }
-    }];
-    // 开始监控
-    [mgr startMonitoring];
-}
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

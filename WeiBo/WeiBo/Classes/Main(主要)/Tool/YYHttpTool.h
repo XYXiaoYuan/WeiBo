@@ -21,4 +21,7 @@
 
 + (void)post:(NSString *)url params:(NSDictionary *)params success:(void (^)(id responseObj))success failure:(void (^)(NSError *error))failure;
 
+// 实时监控网络状态
++ (void)checkNetworkStates;
+
 @end
