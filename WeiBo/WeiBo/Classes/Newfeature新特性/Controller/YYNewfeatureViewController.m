@@ -47,9 +47,9 @@
         // 创建UIImageView
         UIImageView *imageView = [[UIImageView alloc] init];
         NSString *name = [NSString stringWithFormat:@"new_feature_%d", i + 1];
-        if (FourInch) { // 4inch  需要手动去加载4inch对应的-568h图片
-            name = [name stringByAppendingString:@"-568h"];
-        }
+                
+        NSLog(@"新特性界面图片名%@",name);
+        
         imageView.image = [UIImage yy_imageWithName:name];
         [scrollView addSubview:imageView];
         
