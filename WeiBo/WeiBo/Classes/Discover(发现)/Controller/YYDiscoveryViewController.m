@@ -7,6 +7,7 @@
 //
 
 #import "YYDiscoveryViewController.h"
+#import "YYSearchBar.h"
 
 @interface YYDiscoveryViewController ()
 
@@ -16,8 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    YYLog(@"YYDiscoveryViewController-----viewDidLoad");
-    // Do any additional setup after loading the view.
+    
+    // 1.设置搜索框
+    [self setupSearchbar];
+    
+}
+
+- (void)setupSearchbar
+{
+    YYSearchBar *searchBar = [YYSearchBar searchBar];
+    searchBar.width = 300;
+    searchBar.height = 30;
+    self.navigationItem.titleView = searchBar;
 }
 
 - (void)didReceiveMemoryWarning {

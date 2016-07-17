@@ -39,6 +39,7 @@
 		1CD683AE1D3A88970007701B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683AD1D3A88970007701B /* UIView+Extension.m */; };
 		1CD683B11D3A8F290007701B /* UIBarButtonItem+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683B01D3A8F290007701B /* UIBarButtonItem+YYExtension.m */; };
 		1CD683B41D3B31BC0007701B /* YYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683B31D3B31BC0007701B /* YYTitleButton.m */; };
+		1CD683B71D3B346A0007701B /* YYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683B61D3B346A0007701B /* YYSearchBar.m */; };
 		F7B8A6074AA297B6068B33AF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1B73E40A19F466FB15B8AF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +122,8 @@
 		1CD683B01D3A8F290007701B /* UIBarButtonItem+YYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+YYExtension.m"; sourceTree = "<group>"; };
 		1CD683B21D3B31BC0007701B /* YYTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTitleButton.h; sourceTree = "<group>"; };
 		1CD683B31D3B31BC0007701B /* YYTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTitleButton.m; sourceTree = "<group>"; };
+		1CD683B51D3B346A0007701B /* YYSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSearchBar.h; sourceTree = "<group>"; };
+		1CD683B61D3B346A0007701B /* YYSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSearchBar.m; sourceTree = "<group>"; };
 		7C1B73E40A19F466FB15B8AF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8A06C352AED1C16729F030 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A62AFE44AB6C95B79DF9A007 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -300,6 +303,8 @@
 		1C593D441D3A6D6E00E8AA13 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1CD683B51D3B346A0007701B /* YYSearchBar.h */,
+				1CD683B61D3B346A0007701B /* YYSearchBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -766,6 +771,7 @@
 				1C593D751D3A6EC700E8AA13 /* MJPhotoLoadingView.m in Sources */,
 				1CD683991D3A7D890007701B /* YYHomeViewController.m in Sources */,
 				1CD683A51D3A7E240007701B /* YYComposeViewController.m in Sources */,
+				1CD683B71D3B346A0007701B /* YYSearchBar.m in Sources */,
 				1C593D781D3A6EC700E8AA13 /* MJPhotoView.m in Sources */,
 				1CD683A21D3A7DD90007701B /* YYProfileViewController.m in Sources */,
 				1C593D761D3A6EC700E8AA13 /* MJPhotoProgressView.m in Sources */,
