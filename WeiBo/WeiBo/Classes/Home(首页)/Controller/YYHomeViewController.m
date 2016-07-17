@@ -7,9 +7,11 @@
 //
 
 #import "YYHomeViewController.h"
+#import "YYTitleButton.h"
 
 @interface YYHomeViewController ()
-
+/** titleButton */
+@property(nonatomic,weak) YYTitleButton *titleButton;
 @end
 
 @implementation YYHomeViewController
@@ -18,18 +20,49 @@
     [super viewDidLoad];
     
     
-    YYLog(@"YYHomeViewController-----viewDidLoad");
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // 设置导航栏的内容
+    [self setupNavBar];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/**
+ *  设置导航栏的内容
+ */
+- (void)setupNavBar
+{
+    // 设置导航栏按钮
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem yy_itemWithImageName:@"navigationbar_friendsearch" highImageName:@"navigationbar_friendsearch_highlighted" target:self action:@selector(friendSearch)];
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem yy_itemWithImageName:@"navigationbar_pop" highImageName:@"navigationbar_pop_highlighted" target:self action:@selector(pop)];
+    
+    // 设置导航栏中间的标题按钮
+    YYTitleButton *titleButton = [[YYTitleButton alloc] init];
+    // 设置尺寸
+    titleButton.height = 35;
+    // 设置文字
+//    NSString *name = [YYAccountTool account].name;
+//    [titleButton setTitle:name ? name : @"首页" forState:UIControlStateNormal];
+    // 设置图标
+    [titleButton setImage:[UIImage yy_imageWithName:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    // 设置背景
+    [titleButton setBackgroundImage:[UIImage yy_resizedImage:@"navigationbar_filter_background_highlighted"] forState:UIControlStateHighlighted];
+    // 监听按钮点击
+    [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = titleButton;
+    self.titleButton = titleButton;
 }
+
+- (void)friendSearch
+{
+    YYLog(@"friendSearch---");
+}
+
+- (void)pop
+{
+    YYLog(@"pop---");
+    
+    [self.titleButton setTitle:@"哈哈哈" forState:UIControlStateNormal];
+}
+
 
 #pragma mark - Table view data source
 
