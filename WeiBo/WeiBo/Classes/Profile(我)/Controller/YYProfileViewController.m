@@ -7,6 +7,7 @@
 //
 
 #import "YYProfileViewController.h"
+#import "YYSettingViewController.h"
 
 @interface YYProfileViewController ()
 
@@ -17,23 +18,58 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-     YYLog(@"YYProfileViewController-----viewDidLoad");
-    // Do any additional setup after loading the view.
+    // 初始化模型数据
+    [self setupGroups];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStyleDone target:self action:@selector(setting)];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setting
+{
+    YYSettingViewController *setting = [[YYSettingViewController alloc] init];
+    [self.navigationController pushViewController:setting animated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/**
+ *  初始化模型数据
+ */
+- (void)setupGroups
+{
+    [self setupGroup0];
+    [self setupGroup1];
 }
-*/
 
+- (void)setupGroup0
+{
+    // 1.创建组
+    YYCommonGroup *group = [YYCommonGroup group];
+    [self.groups addObject:group];
+    
+    // 2.设置组的所有行数据
+    YYCommonArrowItem *newFriend = [YYCommonArrowItem itemWithTitle:@"新的好友" icon:@"new_friend"];
+    newFriend.badgeValue = @"5";
+    
+    group.items = @[newFriend];
+}
+
+- (void)setupGroup1
+{
+    // 1.创建组
+    YYCommonGroup *group = [YYCommonGroup group];
+    [self.groups addObject:group];
+    
+    // 2.设置组的所有行数据
+    YYCommonArrowItem *album = [YYCommonArrowItem itemWithTitle:@"我的相册" icon:@"album"];
+    album.subtitle = @"(100)";
+    
+    YYCommonArrowItem *collect = [YYCommonArrowItem itemWithTitle:@"我的收藏" icon:@"collect"];
+    collect.subtitle = @"(10)";
+    collect.badgeValue = @"1";
+    
+    YYCommonArrowItem *like = [YYCommonArrowItem itemWithTitle:@"赞" icon:@"like"];
+    like.subtitle = @"(36)";
+    like.badgeValue = @"10";
+    
+    group.items = @[album, collect, like];
+}
 @end
