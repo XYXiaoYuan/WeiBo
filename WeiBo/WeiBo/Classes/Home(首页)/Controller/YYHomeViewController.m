@@ -51,6 +51,35 @@
     self.titleButton = titleButton;
 }
 
+#pragma mark - 私有方法
+/**
+ *  点击标题点击
+ */
+- (void)titleClick:(UIButton *)titleButton
+{
+    // 换成箭头向上
+    [titleButton setImage:[UIImage yy_imageWithName:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
+    
+    // 弹出菜单
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
+//    button.backgroundColor = [UIColor blueColor];
+//    
+//    HMPopMenu *menu = [[HMPopMenu alloc ] initWithContentView:nil];
+//    menu.delegate = self;
+//    menu.arrowPosition = HMPopMenuArrowPositionCenter;
+//    //    menu.dimBackground = YES;
+//    [menu showInRect:CGRectMake(100, 0, 200, 480)];
+}
+
+
+/**
+ *  点击了遮盖
+ */
+- (void)coverClick
+{
+    YYLog(@"coverClick---");
+}
+
 - (void)friendSearch
 {
     YYLog(@"friendSearch---");
