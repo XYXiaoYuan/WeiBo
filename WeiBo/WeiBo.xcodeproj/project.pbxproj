@@ -22,6 +22,8 @@
 		1C38ED051D3B81910003D69F /* YYUnreadCountResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C38ED041D3B81910003D69F /* YYUnreadCountResult.m */; };
 		1C38ED0B1D3B829E0003D69F /* YYRepostsParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C38ED0A1D3B829E0003D69F /* YYRepostsParam.m */; };
 		1C38ED0E1D3B82D30003D69F /* YYRepostsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C38ED0D1D3B82D30003D69F /* YYRepostsResult.m */; };
+		1C38ED1A1D3B98560003D69F /* YYLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C38ED191D3B98560003D69F /* YYLoadMoreFooter.m */; };
+		1C38ED1C1D3B98630003D69F /* YYLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C38ED1B1D3B98630003D69F /* YYLoadMoreFooter.xib */; };
 		1C593D151D3A659700E8AA13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C593D141D3A659700E8AA13 /* Assets.xcassets */; };
 		1C593D231D3A659700E8AA13 /* WeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C593D221D3A659700E8AA13 /* WeiBoTests.m */; };
 		1C593D2E1D3A659700E8AA13 /* WeiBoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C593D2D1D3A659700E8AA13 /* WeiBoUITests.m */; };
@@ -124,6 +126,9 @@
 		1C38ED0A1D3B829E0003D69F /* YYRepostsParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYRepostsParam.m; sourceTree = "<group>"; };
 		1C38ED0C1D3B82D30003D69F /* YYRepostsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYRepostsResult.h; sourceTree = "<group>"; };
 		1C38ED0D1D3B82D30003D69F /* YYRepostsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYRepostsResult.m; sourceTree = "<group>"; };
+		1C38ED181D3B98560003D69F /* YYLoadMoreFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYLoadMoreFooter.h; sourceTree = "<group>"; };
+		1C38ED191D3B98560003D69F /* YYLoadMoreFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYLoadMoreFooter.m; sourceTree = "<group>"; };
+		1C38ED1B1D3B98630003D69F /* YYLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYLoadMoreFooter.xib; sourceTree = "<group>"; };
 		1C593D051D3A659700E8AA13 /* WeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C593D141D3A659700E8AA13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C593D191D3A659700E8AA13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -440,10 +445,14 @@
 			children = (
 				1CD683F41D3B493C0007701B /* Detail */,
 				1CD683F21D3B493C0007701B /* Cell */,
+				1CD683F31D3B493C0007701B /* Toolbar */,
 				1CD683B21D3B31BC0007701B /* YYTitleButton.h */,
 				1CD683B31D3B31BC0007701B /* YYTitleButton.m */,
 				1CD683F51D3B4B4A0007701B /* YYPopMenu.h */,
 				1CD683F61D3B4B4A0007701B /* YYPopMenu.m */,
+				1C38ED181D3B98560003D69F /* YYLoadMoreFooter.h */,
+				1C38ED191D3B98560003D69F /* YYLoadMoreFooter.m */,
+				1C38ED1B1D3B98630003D69F /* YYLoadMoreFooter.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -776,7 +785,6 @@
 		1CD683F21D3B493C0007701B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				1CD683F31D3B493C0007701B /* Toolbar */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -785,7 +793,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Toolbar;
+			name = Toolbar;
+			path = Cell/Toolbar;
 			sourceTree = "<group>";
 		};
 		1CD683F41D3B493C0007701B /* Detail */ = {
@@ -925,6 +934,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C38ED1C1D3B98630003D69F /* YYLoadMoreFooter.xib in Resources */,
 				1C593D731D3A6EC700E8AA13 /* MJPhotoBrowser.bundle in Resources */,
 				1C593D151D3A659700E8AA13 /* Assets.xcassets in Resources */,
 				1CD683E81D3B3FB30007701B /* MBProgressHUD.bundle in Resources */,
@@ -1010,6 +1020,7 @@
 				1C593D771D3A6EC700E8AA13 /* MJPhotoToolbar.m in Sources */,
 				1C38ECE61D3B7C930003D69F /* YYHttpTool.m in Sources */,
 				1C593D741D3A6EC700E8AA13 /* MJPhotoBrowser.m in Sources */,
+				1C38ED1A1D3B98560003D69F /* YYLoadMoreFooter.m in Sources */,
 				1CD683AE1D3A88970007701B /* UIView+Extension.m in Sources */,
 				1C593D821D3A71C800E8AA13 /* YYTabBarViewController.m in Sources */,
 				1C593D791D3A6EC700E8AA13 /* SDWebImageManager+MJ.m in Sources */,
