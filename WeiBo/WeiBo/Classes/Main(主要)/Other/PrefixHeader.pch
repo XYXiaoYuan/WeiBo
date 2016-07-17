@@ -34,6 +34,9 @@
 // 是否为iOS7
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 
+// 是否为4inch
+#define FourInch ([UIScreen mainScreen].bounds.size.height == 568.0)
+
 // 导航栏标题的字体
 #define YYNavigationTitleFont [UIFont boldSystemFontOfSize:20]
 

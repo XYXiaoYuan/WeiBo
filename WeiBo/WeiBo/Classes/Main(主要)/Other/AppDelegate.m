@@ -8,7 +8,7 @@
 //
 
 #import "AppDelegate.h"
-#import "YYTabBarViewController.h"
+#import "YYControllerTool.h"
 
 @interface AppDelegate ()
 
@@ -23,9 +23,16 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    self.window.rootViewController = [[YYTabBarViewController alloc] init];
-    
     [self.window makeKeyAndVisible];
+    
+    // 3.设置窗口的根控制器
+//    HMAccount *account = [HMAccountTool account];
+//    if (account) {
+        [YYControllerTool yy_chooseRootViewController];
+//    } else { // 没有登录过
+//        self.window.rootViewController = [[HMOAuthViewController alloc] init];
+//    }
+
     
     return YES;
 }
