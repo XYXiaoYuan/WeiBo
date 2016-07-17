@@ -111,10 +111,9 @@
     // 3.3 处理加号按钮的点击,写处理点击的逻辑放在block中
     customTabBar.tabBarPlusClickBlock = ^{
         // 弹出发微博控制器
-        YYLog(@"弹出发微博控制器");
-//        YYComposeViewController *compose = [[YYComposeViewController alloc] init];
-//        YYNavigationController *nav = [[YYNavigationController alloc] initWithRootViewController:compose];
-//        [self presentViewController:nav animated:YES completion:nil];
+        YYComposeViewController *compose = [[YYComposeViewController alloc] init];
+        YYNavigationController *nav = [[YYNavigationController alloc] initWithRootViewController:compose];
+        [self presentViewController:nav animated:YES completion:nil];
     };
 }
 

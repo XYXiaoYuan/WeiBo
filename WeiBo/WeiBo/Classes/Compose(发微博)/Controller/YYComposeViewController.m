@@ -16,22 +16,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // 设置导航条内容
+    [self setupNavBar];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+// 设置导航条内容
+- (void)setupNavBar
+{
+//    NSString *name = [HMAccountTool account].name;
+//    if (name) {
+//        // 构建文字
+//        NSString *prefix = @"发微博";
+//        NSString *text = [NSString stringWithFormat:@"%@\n%@", prefix, name];
+//        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text];
+//        [string addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:15] range:[text rangeOfString:prefix]];
+//        [string addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:[text rangeOfString:name]];
+//        
+//        // 创建label
+//        UILabel *titleLabel = [[UILabel alloc] init];
+//        titleLabel.attributedText = string;
+//        titleLabel.numberOfLines = 0;
+//        titleLabel.textAlignment = NSTextAlignmentCenter;
+//        titleLabel.width = 100;
+//        titleLabel.height = 44;
+//        self.navigationItem.titleView = titleLabel;
+//    } else {
+        self.navigationItem.title = @"发微博";
+//    }
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleBordered target:self action:@selector(cancel)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"发送" style:UIBarButtonItemStyleBordered target:self action:@selector(send)];
+    self.navigationItem.rightBarButtonItem.enabled = NO;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - 私有方法
+/**
+ *  取消
+ */
+- (void)cancel
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
+
+/**
+ *  发送
+ */
+- (void)send
+{
+   
+    YYLog(@"发送微博");
+}
+
 
 @end
