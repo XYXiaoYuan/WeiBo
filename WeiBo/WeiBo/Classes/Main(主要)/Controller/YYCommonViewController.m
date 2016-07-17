@@ -7,92 +7,97 @@
 //
 
 #import "YYCommonViewController.h"
+#import "YYCommonGroup.h"
+#import "YYCommonItem.h"
+#import "YYCommonCell.h"
+#import "YYCommonArrowItem.h"
+#import "YYCommonSwitchItem.h"
+#import "YYCommonLabelItem.h"
 
 @interface YYCommonViewController ()
-
+@property (nonatomic, strong) NSMutableArray *groups;
 @end
 
 @implementation YYCommonViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+- (NSMutableArray *)groups
+{
+    if (_groups == nil) {
+        self.groups = [NSMutableArray array];
+    }
+    return _groups;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/** 屏蔽tableView的样式 */
+- (id)init
+{
+    return [self initWithStyle:UITableViewStyleGrouped];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    // 设置tableView属性
+    self.tableView.backgroundColor = YYGlobalBg;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.sectionFooterHeight = YYStatusCellMargin;
+    self.tableView.sectionHeaderHeight = 0;
+    self.tableView.contentInset = UIEdgeInsetsMake(YYStatusCellMargin - 35, 0, 0, 0);
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.groups.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    YYCommonGroup *group = self.groups[section];
+    return group.items.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YYCommonCell *cell = [YYCommonCell cellWithTableView:tableView];
+    YYCommonGroup *group = self.groups[indexPath.section];
+    cell.item = group.items[indexPath.row];
+    // 设置cell所处的行号 和 所处组的总行数
+    [cell setIndexPath:indexPath rowsInSection:group.items.count];
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    YYCommonGroup *group = self.groups[section];
+    return group.footer;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    YYCommonGroup *group = self.groups[section];
+    return group.header;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+#pragma mark - Table view delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 1.取出这行对应的item模型
+    YYCommonGroup *group = self.groups[indexPath.section];
+    YYCommonItem *item = group.items[indexPath.row];
+    
+    // 2.判断有无需要跳转的控制器
+    if (item.destVcClass) {
+        UIViewController *destVc = [[item.destVcClass alloc] init];
+        destVc.title = item.title;
+        [self.navigationController pushViewController:destVc animated:YES];
+    }
+    
+    // 3.判断有无想执行的操作
+    if (item.operation) {
+        item.operation();
+    }
 }
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

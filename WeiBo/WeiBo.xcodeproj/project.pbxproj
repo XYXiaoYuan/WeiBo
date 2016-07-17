@@ -40,6 +40,15 @@
 		1CD683B11D3A8F290007701B /* UIBarButtonItem+YYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683B01D3A8F290007701B /* UIBarButtonItem+YYExtension.m */; };
 		1CD683B41D3B31BC0007701B /* YYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683B31D3B31BC0007701B /* YYTitleButton.m */; };
 		1CD683B71D3B346A0007701B /* YYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683B61D3B346A0007701B /* YYSearchBar.m */; };
+		1CD683C21D3B37710007701B /* YYBaseParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683C11D3B37710007701B /* YYBaseParam.m */; };
+		1CD683C51D3B37F10007701B /* YYCommonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683C41D3B37F10007701B /* YYCommonItem.m */; };
+		1CD683C81D3B38160007701B /* YYCommonLabelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683C71D3B38160007701B /* YYCommonLabelItem.m */; };
+		1CD683CB1D3B38250007701B /* YYCommonArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683CA1D3B38250007701B /* YYCommonArrowItem.m */; };
+		1CD683CE1D3B38370007701B /* YYCommonSwitchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683CD1D3B38370007701B /* YYCommonSwitchItem.m */; };
+		1CD683D11D3B384A0007701B /* YYCommonCenterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683D01D3B384A0007701B /* YYCommonCenterItem.m */; };
+		1CD683D41D3B38570007701B /* YYCommonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683D31D3B38570007701B /* YYCommonGroup.m */; };
+		1CD683D71D3B38910007701B /* YYBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683D61D3B38910007701B /* YYBadgeView.m */; };
+		1CD683DA1D3B38A40007701B /* YYCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD683D91D3B38A40007701B /* YYCommonCell.m */; };
 		F7B8A6074AA297B6068B33AF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1B73E40A19F466FB15B8AF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +133,24 @@
 		1CD683B31D3B31BC0007701B /* YYTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTitleButton.m; sourceTree = "<group>"; };
 		1CD683B51D3B346A0007701B /* YYSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSearchBar.h; sourceTree = "<group>"; };
 		1CD683B61D3B346A0007701B /* YYSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSearchBar.m; sourceTree = "<group>"; };
+		1CD683C01D3B37710007701B /* YYBaseParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYBaseParam.h; sourceTree = "<group>"; };
+		1CD683C11D3B37710007701B /* YYBaseParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYBaseParam.m; sourceTree = "<group>"; };
+		1CD683C31D3B37F10007701B /* YYCommonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCommonItem.h; sourceTree = "<group>"; };
+		1CD683C41D3B37F10007701B /* YYCommonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCommonItem.m; sourceTree = "<group>"; };
+		1CD683C61D3B38160007701B /* YYCommonLabelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCommonLabelItem.h; sourceTree = "<group>"; };
+		1CD683C71D3B38160007701B /* YYCommonLabelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCommonLabelItem.m; sourceTree = "<group>"; };
+		1CD683C91D3B38250007701B /* YYCommonArrowItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCommonArrowItem.h; sourceTree = "<group>"; };
+		1CD683CA1D3B38250007701B /* YYCommonArrowItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCommonArrowItem.m; sourceTree = "<group>"; };
+		1CD683CC1D3B38370007701B /* YYCommonSwitchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCommonSwitchItem.h; sourceTree = "<group>"; };
+		1CD683CD1D3B38370007701B /* YYCommonSwitchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCommonSwitchItem.m; sourceTree = "<group>"; };
+		1CD683CF1D3B384A0007701B /* YYCommonCenterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCommonCenterItem.h; sourceTree = "<group>"; };
+		1CD683D01D3B384A0007701B /* YYCommonCenterItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCommonCenterItem.m; sourceTree = "<group>"; };
+		1CD683D21D3B38570007701B /* YYCommonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCommonGroup.h; sourceTree = "<group>"; };
+		1CD683D31D3B38570007701B /* YYCommonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCommonGroup.m; sourceTree = "<group>"; };
+		1CD683D51D3B38910007701B /* YYBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYBadgeView.h; sourceTree = "<group>"; };
+		1CD683D61D3B38910007701B /* YYBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYBadgeView.m; sourceTree = "<group>"; };
+		1CD683D81D3B38A40007701B /* YYCommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCommonCell.h; sourceTree = "<group>"; };
+		1CD683D91D3B38A40007701B /* YYCommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCommonCell.m; sourceTree = "<group>"; };
 		7C1B73E40A19F466FB15B8AF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8A06C352AED1C16729F030 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A62AFE44AB6C95B79DF9A007 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -387,6 +414,16 @@
 		1C593D4C1D3A6D6E00E8AA13 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1CD683BC1D3B36BD0007701B /* Reposts */,
+				1CD683B91D3B36BD0007701B /* Comments */,
+				1CD683BA1D3B36BD0007701B /* Common */,
+				1CD683BD1D3B36BD0007701B /* UnreadCount */,
+				1CD683B81D3B36BD0007701B /* AccessToken */,
+				1CD683BB1D3B36BD0007701B /* HomeStatus */,
+				1CD683BF1D3B37260007701B /* SendStatues */,
+				1CD683BE1D3B36BD0007701B /* UserInfo */,
+				1CD683C01D3B37710007701B /* YYBaseParam.h */,
+				1CD683C11D3B37710007701B /* YYBaseParam.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -414,6 +451,10 @@
 			children = (
 				1CD683A91D3A86550007701B /* YYTabBar.h */,
 				1CD683AA1D3A86550007701B /* YYTabBar.m */,
+				1CD683D51D3B38910007701B /* YYBadgeView.h */,
+				1CD683D61D3B38910007701B /* YYBadgeView.m */,
+				1CD683D81D3B38A40007701B /* YYCommonCell.h */,
+				1CD683D91D3B38A40007701B /* YYCommonCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -552,6 +593,74 @@
 				1C593D7C1D3A6F0C00E8AA13 /* RegexKitLite.m */,
 			);
 			path = RegexKitLite;
+			sourceTree = "<group>";
+		};
+		1CD683B81D3B36BD0007701B /* AccessToken */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AccessToken;
+			sourceTree = "<group>";
+		};
+		1CD683B91D3B36BD0007701B /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		1CD683BA1D3B36BD0007701B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1CD683C31D3B37F10007701B /* YYCommonItem.h */,
+				1CD683C41D3B37F10007701B /* YYCommonItem.m */,
+				1CD683C61D3B38160007701B /* YYCommonLabelItem.h */,
+				1CD683C71D3B38160007701B /* YYCommonLabelItem.m */,
+				1CD683C91D3B38250007701B /* YYCommonArrowItem.h */,
+				1CD683CA1D3B38250007701B /* YYCommonArrowItem.m */,
+				1CD683CC1D3B38370007701B /* YYCommonSwitchItem.h */,
+				1CD683CD1D3B38370007701B /* YYCommonSwitchItem.m */,
+				1CD683CF1D3B384A0007701B /* YYCommonCenterItem.h */,
+				1CD683D01D3B384A0007701B /* YYCommonCenterItem.m */,
+				1CD683D21D3B38570007701B /* YYCommonGroup.h */,
+				1CD683D31D3B38570007701B /* YYCommonGroup.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1CD683BB1D3B36BD0007701B /* HomeStatus */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeStatus;
+			sourceTree = "<group>";
+		};
+		1CD683BC1D3B36BD0007701B /* Reposts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reposts;
+			sourceTree = "<group>";
+		};
+		1CD683BD1D3B36BD0007701B /* UnreadCount */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UnreadCount;
+			sourceTree = "<group>";
+		};
+		1CD683BE1D3B36BD0007701B /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		1CD683BF1D3B37260007701B /* SendStatues */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SendStatues;
 			sourceTree = "<group>";
 		};
 		A1CE419F5C776A6EAF64B340 /* Pods */ = {
@@ -765,13 +874,18 @@
 				1C593D821D3A71C800E8AA13 /* YYTabBarViewController.m in Sources */,
 				1C593D791D3A6EC700E8AA13 /* SDWebImageManager+MJ.m in Sources */,
 				1CD683B11D3A8F290007701B /* UIBarButtonItem+YYExtension.m in Sources */,
+				1CD683CB1D3B38250007701B /* YYCommonArrowItem.m in Sources */,
+				1CD683D71D3B38910007701B /* YYBadgeView.m in Sources */,
 				1C593D601D3A6D6E00E8AA13 /* main.m in Sources */,
 				1CD6839C1D3A7DA10007701B /* YYMessageViewController.m in Sources */,
 				1CD683931D3A7D540007701B /* YYNavigationController.m in Sources */,
 				1C593D751D3A6EC700E8AA13 /* MJPhotoLoadingView.m in Sources */,
+				1CD683C21D3B37710007701B /* YYBaseParam.m in Sources */,
 				1CD683991D3A7D890007701B /* YYHomeViewController.m in Sources */,
 				1CD683A51D3A7E240007701B /* YYComposeViewController.m in Sources */,
 				1CD683B71D3B346A0007701B /* YYSearchBar.m in Sources */,
+				1CD683DA1D3B38A40007701B /* YYCommonCell.m in Sources */,
+				1CD683C51D3B37F10007701B /* YYCommonItem.m in Sources */,
 				1C593D781D3A6EC700E8AA13 /* MJPhotoView.m in Sources */,
 				1CD683A21D3A7DD90007701B /* YYProfileViewController.m in Sources */,
 				1C593D761D3A6EC700E8AA13 /* MJPhotoProgressView.m in Sources */,
@@ -779,8 +893,12 @@
 				1CD683961D3A7D690007701B /* YYCommonViewController.m in Sources */,
 				1C593D7D1D3A6F0C00E8AA13 /* RegexKitLite.m in Sources */,
 				1CD683B41D3B31BC0007701B /* YYTitleButton.m in Sources */,
+				1CD683CE1D3B38370007701B /* YYCommonSwitchItem.m in Sources */,
+				1CD683C81D3B38160007701B /* YYCommonLabelItem.m in Sources */,
+				1CD683D41D3B38570007701B /* YYCommonGroup.m in Sources */,
 				1C593D5F1D3A6D6E00E8AA13 /* AppDelegate.m in Sources */,
 				1CD6839F1D3A7DC70007701B /* YYDiscoveryViewController.m in Sources */,
+				1CD683D11D3B384A0007701B /* YYCommonCenterItem.m in Sources */,
 				1CD683AB1D3A86550007701B /* YYTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

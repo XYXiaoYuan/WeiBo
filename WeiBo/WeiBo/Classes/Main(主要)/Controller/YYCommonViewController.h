@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YYCommonGroup.h"
+#import "YYCommonItem.h"
+#import "YYCommonCell.h"
+#import "YYCommonArrowItem.h"
+#import "YYCommonSwitchItem.h"
+#import "YYCommonLabelItem.h"
 
 @interface YYCommonViewController : UITableViewController
-
+- (NSMutableArray *)groups;
 @end
