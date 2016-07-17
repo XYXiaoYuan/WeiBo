@@ -7,6 +7,8 @@
 //
 
 #import "YYBaseParam.h"
+#import "YYAccountTool.h"
+#import "YYAccount.h"
 
 @implementation YYBaseParam
 - (id)init
