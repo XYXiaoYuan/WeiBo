@@ -19,6 +19,11 @@
 // 自定义YYTabBar
 #import "YYTabBar.h"
 
+// 工具类
+#import "YYUserTool.h"
+#import "YYAccount.h"
+#import "YYAccountTool.h"
+
 @interface YYTabBarViewController ()<UITabBarControllerDelegate>
 @property (nonatomic, weak) YYHomeViewController *homeVc;
 @property (nonatomic, weak) YYMessageViewController *messageVc;
@@ -36,22 +41,31 @@
     
     // 3.创建自定义tabbar
     [self addCustomTabBar];
+    
+    self.delegate = self;
+    
 }
 
 #pragma mark - 1.添加所有的子控制器
 - (void)addAllChildViewControllers
 {
     // 1.1 首页
-    [self addOneViewController:[[YYHomeViewController alloc] init] image:@"tabbar_home" selectedImage:@"tabbar_home_selected" title:@"首页"];
+    YYHomeViewController *homeVc = [[YYHomeViewController alloc] init];
+    self.homeVc = homeVc;
+    [self addOneViewController:homeVc image:@"tabbar_home" selectedImage:@"tabbar_home_selected" title:@"首页"];
     
     // 1.2 消息
-    [self addOneViewController:[[YYMessageViewController alloc] init] image:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected" title:@"消息"];
+    YYMessageViewController *messageVc = [[YYMessageViewController alloc] init];
+    self.messageVc = messageVc;
+    [self addOneViewController:messageVc image:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected" title:@"消息"];
     
     // 1.3 发现
     [self addOneViewController:[[YYDiscoveryViewController alloc] init] image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected" title:@"发现"];
     
     // 1.4 我的
-    [self addOneViewController:[[YYProfileViewController alloc] init] image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected" title:@"我的"];
+    YYProfileViewController *profileVc = [[YYProfileViewController alloc] init];
+    self.profileVc = profileVc;
+    [self addOneViewController:profileVc image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected" title:@"我的"];
 }
 
 #pragma mark - 1.1.添加一个子控制器的方法
@@ -116,5 +130,57 @@
         [self presentViewController:nav animated:YES completion:nil];
     };
 }
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UINavigationController *)viewController
+{
+    UIViewController *vc = [viewController.viewControllers firstObject];
+    if ([vc isKindOfClass:[YYHomeViewController class]]) {
+        if (self.lastSelectedViewContoller == vc) {
+//            [self.homeVc refresh:YES];
+        } else {
+//            [self.homeVc refresh:NO];
+        }
+    }
+    
+    self.lastSelectedViewContoller = vc;
+}
+
+- (void)getUnreadCount
+{
+    // 1.请求参数
+    YYUnreadCountParam *param = [YYUnreadCountParam param];
+    param.uid = [YYAccountTool account].uid;
+    
+    // 2.获得未读数
+    [YYUserTool unreadCountWithParam:param success:^(YYUnreadCountResult *result) {
+        // 显示微博未读数
+        if (result.status == 0) {
+            self.homeVc.tabBarItem.badgeValue = nil;
+        } else {
+            self.homeVc.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", result.status];
+        }
+        
+        // 显示消息未读数
+        if (result.messageCount == 0) {
+            self.messageVc.tabBarItem.badgeValue = nil;
+        } else {
+            self.messageVc.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", result.messageCount];
+        }
+        
+        // 显示新粉丝数
+        if (result.follower == 0) {
+            self.profileVc.tabBarItem.badgeValue = nil;
+        } else {
+            self.profileVc.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d", result.follower];
+        }
+        
+        // 在图标上显示所有的未读数
+        [UIApplication sharedApplication].applicationIconBadgeNumber = result.totalCount;
+        YYLog(@"总未读数--%d", result.totalCount);
+    } failure:^(NSError *error) {
+        YYLog(@"获得未读数失败---%@", error);
+    }];
+}
+
 
 @end

@@ -67,10 +67,13 @@
                 
             case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
 //                YYLog(@"手机自带网络");
+//                [MBProgressHUD showMessage:@"手机自带网络"];
+
                 break;
                 
             case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
 //                YYLog(@"WIFI");
+//                [MBProgressHUD showMessage:@"WIFI连接"];
                 break;
         }
     }];
